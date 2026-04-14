@@ -4,3 +4,23 @@ __pycache__/
 .DS_Store
 *.log
 .env
+
+# Runtime state (contains user-specific paths)
+literature_review_memory.json
+
+# User configuration (may contain real credentials)
+config.yaml
+
+# Generated output
+output/
+
+# Document exports
+*.docx
+*.pdf
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db

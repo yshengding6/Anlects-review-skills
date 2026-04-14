@@ -2,16 +2,16 @@
   "graph_version": "1.0",
   "source_materials": {
     "gongye_files": [
-      "D:/HuaweiMoveData/Users/老丁的电脑/Desktop/学习/论语/笔记资料/公冶长第五/文献综述-公冶长5.21狂简章.md",
-      "D:/HuaweiMoveData/Users/老丁的电脑/Desktop/学习/论语/笔记资料/公冶长第五/历代学者注疏综合.md",
-      "D:/HuaweiMoveData/Users/老丁的电脑/Desktop/学习/论语/笔记资料/公冶长第五/圆桌会议纪要.md",
-      "D:/HuaweiMoveData/Users/老丁的电脑/Desktop/学习/论语/笔记资料/公冶长第五/5.21诸子百家对狂简章论述分析.md",
-      "D:/HuaweiMoveData/Users/老丁的电脑/Desktop/学习/论语/笔记资料/公冶长第五/论语公冶长第五5.16善交章的历代注释研究_综述.md"
+      "./data/公冶长第五/文献综述-公冶长5.21狂简章.md",
+      "./data/公冶长第五/历代学者注疏综合.md",
+      "./data/公冶长第五/圆桌会议纪要.md",
+      "./data/公冶长第五/5.21诸子百家对狂简章论述分析.md",
+      "./data/公冶长第五/论语公冶长第五5.16善交章的历代注释研究_综述.md"
     ],
     "xueqi_files": [
-      "D:/HuaweiMoveData/Users/老丁的电脑/Desktop/学习/论语/论语文稿/学而篇第一/孔子没说的秘密（一到十六）.docx 系列（16篇）",
-      "D:/HuaweiMoveData/Users/老丁的电脑/Desktop/学习/论语/论语文稿/学而篇第一/不是序章，而是地基：写在《学而篇》的最后.docx",
-      "D:/HuaweiMoveData/Users/老丁的电脑/Desktop/学习/论语/论语文稿/学而篇第一/【老丁读书】发刊词：你所不知道的《论语》.docx"
+      "./data/学而篇第一/孔子没说的秘密（一到十六）.docx 系列（16篇）",
+      "./data/学而篇第一/不是序章，而是地基：写在《学而篇》的最后.docx",
+      "./data/学而篇第一/【老丁读书】发刊词：你所不知道的《论语》.docx"
     ],
     "built_date": "2026-04-04",
     "note": "P1+P2完成：公冶长第五（5.6/5.16/5.20/5.21/5.26）+ 学而篇全16章（1.1-1.16）"

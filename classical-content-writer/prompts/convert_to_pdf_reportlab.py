@@ -22,18 +22,33 @@ if sys.platform == 'win32':
 
 
 def register_fonts():
-    """注册中文字体"""
-    # 尝试注册常见的中文字体
-    font_paths = [
-        # Windows 常见中文字体
-        'C:/Windows/Fonts/simsun.ttc',      # 宋体
-        'C:/Windows/Fonts/simhei.ttf',       # 黑体
-        'C:/Windows/Fonts/msyh.ttc',         # 微软雅黑
-        'C:/Windows/Fonts/simkai.ttf',       # 楷体
-        'C:/Windows/Fonts/simfang.ttf',      # 仿宋
-        # 备选路径
-        'C:/Windows/Fonts/simsun.ttf',
-    ]
+    """注册中文字体（跨平台自动检测）"""
+    import platform
+    _system = platform.system()
+    if _system == 'Windows':
+        _font_base = "C:/Windows/Fonts"
+        font_paths = [
+            f'{_font_base}/simsun.ttc',      # 宋体
+            f'{_font_base}/simhei.ttf',       # 黑体
+            f'{_font_base}/msyh.ttc',         # 微软雅黑
+            f'{_font_base}/simkai.ttf',       # 楷体
+            f'{_font_base}/simfang.ttf',      # 仿宋
+            f'{_font_base}/simsun.ttf',       # 备选
+        ]
+    elif _system == 'Darwin':  # macOS
+        font_paths = [
+            '/System/Library/Fonts/STSong.ttf',
+            '/System/Library/Fonts/STHeiti Medium.ttc',
+            '/System/Library/Fonts/PingFang.ttc',
+            '/System/Library/Fonts/STKaiti.ttf',
+            '/System/Library/Fonts/STFangsong.ttf',
+        ]
+    else:  # Linux
+        font_paths = [
+            '/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc',
+            '/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc',
+            '/usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc',
+        ]
 
     font_registered = False
 

@@ -1,3 +1,8 @@
+# ⚠️ SECURITY WARNING ⚠️
+# This is an EXAMPLE configuration file. DO NOT fill in real credentials here.
+# Copy this file to config.yaml (which is gitignored) and fill in your real values there.
+# Never commit config.yaml or any file containing real API keys/secrets to version control.
+
 # Literature Review Skill Configuration Example
 # Copy this file to config.yaml and fill in your values
 
