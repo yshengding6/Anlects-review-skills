@@ -1,0 +1,8 @@
+# Literature Review Skill - Core Dependencies
+# Python version: 3.8+
+
+# === Configuration ===
+pyyaml>=6.0
+
+# === Markdown ===
+markdown>=3.5
