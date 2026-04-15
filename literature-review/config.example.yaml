@@ -3,8 +3,7 @@
 # Copy this file to config.yaml (which is gitignored) and fill in your real values there.
 # Never commit config.yaml or any file containing real API keys/secrets to version control.
 
-# Literature Review Skill Configuration Example
-# Copy this file to config.yaml and fill in your values
+# Anlects Review Skill Configuration Example
 
 # Feishu Integration Settings
 feishu:
@@ -58,4 +57,4 @@ web_search:
 # Logging Configuration
 logging:
   level: INFO  # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
-  log_file: "literature_review.log"
+  log_file: "anlects_review.log"

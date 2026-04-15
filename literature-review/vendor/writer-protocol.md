@@ -1,6 +1,6 @@
 # 写作协议精简版（vendor/writer-protocol.md）
 
-> 本文件是 `literature-review` skill 内嵌的精简写作协议。
+> 本文件是 `Anlects-review` skill 内嵌的精简写作协议。
 > 完整版见 `classical-content-writer` skill 的 SKILL.md。
 
 ## 写作递进流程

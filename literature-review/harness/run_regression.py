@@ -61,7 +61,7 @@ class RegressionRunner:
         all_passed = True
         
         print("\n" + "=" * 70)
-        print("Literature Review Skill Regression Test (v4.3.0)")
+        print("Anlects Review Skill Regression Test (v4.3.0)")
         print("=" * 70)
         
         for i, test_case in enumerate(self.golden_set, 1):

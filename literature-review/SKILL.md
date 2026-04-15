@@ -1,13 +1,13 @@
 ---
-name: literature-review
+name: Anlects-review
 version: 5.0.0
 description: 中国传统文献深度分析器。通过政治史还原、注疏六维解剖、文本异常检测、变量替换实验四种方法论，对古文典籍进行深度学术分析，支持从分析到公众号写作的完整链路。需完整写作协议可加载 classical-content-writer，需文化比较可加载 cultural-comparator。
 tags: [research, classical-chinese, confucianism, political-history, anomaly-detection, socratic-method, evidence-grading, laoding-factor]
 ---
 
-# Literature Review v5.0.0 — 古典文献深度分析器
+# Anlects Review v5.0.0 — 古典文献深度分析器
 
-> **适用场景**: 【老丁读书】专栏 · 经典章句学术史重构
+> **适用场景**: 古典文献专栏 · 经典章句学术史重构
 > **核心目标**: 通过硬核方法论重建某一章句的学术史结构，呈现争议焦点、政治动机、解释路径与冷知识命题
 > **协作Skill**: `classical-content-writer`（完整写作协议）/ `cultural-comparator`（中西文化比较）
 
@@ -171,7 +171,7 @@ tags: [research, classical-chinese, confucianism, political-history, anomaly-det
 
 ### 阶段 6：归档（可选）
 
-将输出文档保存到笔记系统。建议使用 Get笔记 skill 保存到【论语研究】知识库。
+将输出文档保存到笔记系统。建议使用笔记工具（如 Get笔记、Notion 等）保存到对应知识库。
 
 标签规则：`论语研究`（必加）+ 文档类型标签 + 学派标签（最多5个）
 
@@ -271,7 +271,7 @@ tags: [research, classical-chinese, confucianism, political-history, anomaly-det
 ### 记忆管理
 
 使用 `memory_manager.py` + `chapter_graph.json`：
-- 记忆文件：`literature_review_memory.json`
+- 记忆文件：`anlects_review_memory.json`
 - 支持读取、写入、遗忘的完整生命周期
 - 初始效用值 0.75，写入触发阈值 0.5
 

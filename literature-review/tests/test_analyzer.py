@@ -1,5 +1,5 @@
 """
-Enhanced Literature Review Skill Tests
+Enhanced Anlects Review Skill Tests
 
 Tests for:
 - Document analysis (TXT, PDF)
@@ -392,7 +392,7 @@ def test_integration_full_workflow():
 def run_all_tests():
     """Run all tests"""
     print("=" * 60)
-    print("LITERATURE REVIEW SKILL - ENHANCED TESTS")
+    print("ANLECTS REVIEW SKILL - ENHANCED TESTS")
     print("=" * 60)
 
     tests = [

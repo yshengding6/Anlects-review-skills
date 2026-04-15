@@ -1,5 +1,5 @@
 """
-Literature Review Skill v4.3.0 - Route Assertions
+Anlects Review Skill v4.3.0 - Route Assertions
 路由断言：验证文本特征→方法论启用的映射是否符合原则零规则
 
 用法:
@@ -266,7 +266,7 @@ def run_golden_set_tests() -> tuple:
     all_errors = []
     
     print("=" * 60)
-    print("LITERATURE REVIEW SKILL v4.3.0 - ROUTE ASSERTIONS")
+    print("ANLECTS REVIEW SKILL v4.3.0 - ROUTE ASSERTIONS")
     print("=" * 60)
     
     for case in cases:

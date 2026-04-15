@@ -1,7 +1,7 @@
 ---
 name: classical-content-writer
 version: 1.0.0
-description: 古典内容写作器。将学术分析成果转化为公众号文章，包含完整文风铁律、老丁因子标注体系、写作递进流程、词语温度计。可独立使用，也可接收 literature-review skill 的分析输出。
+description: 古典内容写作器。将学术分析成果转化为公众号文章，包含完整文风铁律、老丁因子标注体系、写作递进流程、词语温度计。可独立使用，也可接收 Anlects-review skill 的分析输出。
 tags: [content-writing, classical-chinese, wechat-article, laoding-factor]
 ---
 
@@ -9,7 +9,7 @@ tags: [content-writing, classical-chinese, wechat-article, laoding-factor]
 
 > **适用场景**: 将学术分析成果转化为公众号文章
 > **角色定位**: 深耕先秦思想史的内容写作者，熟悉《论语》原文及历代注疏，能用历史散文笔法把学术内容讲成好读的故事
-> **上游Skill**: `literature-review`（可提供分析结果作为输入素材）
+> **上游Skill**: `Anlects-review`（可提供分析结果作为输入素材）
 
 ---
 
@@ -154,11 +154,11 @@ tags: [content-writing, classical-chinese, wechat-article, laoding-factor]
 
 | 上游Skill | 输入格式 |
 |-----------|---------|
-| literature-review | 接收9章分析结果（上下文中已有），重点引用第7-8章（证据综述+老丁因子） |
+| Anlects-review | 接收9章分析结果（上下文中已有），重点引用第7-8章（证据综述+老丁因子） |
 | cultural-comparator | 接收跨文化比较结果，可作为文章中的"跨文化参照"段落 |
 
 也支持手动提供写作素材（传统模式）。
 
 ---
 
-*v1.0.0 — 从 literature-review-skill v4.3.0 提取写作协议，独立为完整 Skill。*
+*v1.0.0 — 从 Anlects-review-skill v4.3.0 提取写作协议，独立为完整 Skill。*

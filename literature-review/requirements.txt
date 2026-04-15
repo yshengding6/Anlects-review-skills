@@ -1,4 +1,4 @@
-# Literature Review Skill - Core Dependencies
+# Anlects Review Skill - Core Dependencies
 # Python version: 3.8+
 
 # === Configuration ===

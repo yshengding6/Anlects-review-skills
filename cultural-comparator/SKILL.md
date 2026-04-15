@@ -1,14 +1,14 @@
 ---
 name: cultural-comparator
 version: 2.0.0
-description: 中西文化比较器。三层比较架构——诸子百家横向对话、东西方思想纵深对照、宗教传统交叉审视。支持概念映射、维度对比、对话模拟、不可通约性分析。可独立使用，也可接收 literature-review skill 的核心概念作为比较起点。
+description: 中西文化比较器。三层比较架构——诸子百家横向对话、东西方思想纵深对照、宗教传统交叉审视。支持概念映射、维度对比、对话模拟、不可通约性分析。可独立使用，也可接收 Anlects-review skill 的核心概念作为比较起点。
 tags: [cultural-comparison, chinese-philosophy, western-philosophy, eastern-religion, western-religion, confucianism, cross-cultural]
 ---
 
 # Cultural Comparator v2.0.0 — 三层文化比较器
 
 > **适用场景**: 中国传统概念的多维度跨文化比较分析
-> **上游Skill**: `literature-review`（可提供核心概念作为比较起点）
+> **上游Skill**: `Anlects-review`（可提供核心概念作为比较起点）
 > **下游Skill**: `classical-content-writer`（比较结果可用于文章中的跨文化参照段落）
 
 ---
@@ -227,7 +227,7 @@ tags: [cultural-comparison, chinese-philosophy, western-philosophy, eastern-reli
 请从伦理学维度比较"义"在儒法两家和康德/边沁之间的异同
 ```
 
-### 接收 literature-review 输出
+### 接收 Anlects-review 输出
 
 ```
 基于上面5.25章的分析，比较"伐善"概念在中西伦理传统中的位置
@@ -263,7 +263,7 @@ tags: [cultural-comparison, chinese-philosophy, western-philosophy, eastern-reli
 
 | 上游Skill | 输入 |
 |-----------|------|
-| literature-review | 核心概念（key_concepts），或用户手动指定比较主题 |
+| Anlects-review | 核心概念（key_concepts），或用户手动指定比较主题 |
 
 | 下游Skill | 输出 |
 |-----------|------|

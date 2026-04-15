@@ -11,7 +11,7 @@
     "xueqi_files": [
       "./data/学而篇第一/孔子没说的秘密（一到十六）.docx 系列（16篇）",
       "./data/学而篇第一/不是序章，而是地基：写在《学而篇》的最后.docx",
-      "./data/学而篇第一/【老丁读书】发刊词：你所不知道的《论语》.docx"
+      "./data/学而篇第一/【专栏】发刊词：你所不知道的《论语》.docx"
     ],
     "built_date": "2026-04-04",
     "note": "P1+P2完成：公冶长第五（5.6/5.16/5.20/5.21/5.26）+ 学而篇全16章（1.1-1.16）"
@@ -1772,7 +1772,7 @@
     "description": "P2记忆压缩：从原始分析提炼高密度标签，保留核心争议+冷知识+叙事链，供快速路由使用",
     "compression_version": "1.1",
     "built_date": "2026-04-04",
-    "source": "literature-review-skill v4.1 MSA-P2",
+    "source": "Anlects-review-skill v4.1 MSA-P2",
     "chapters": {
       "5.21": {
         "routing_tags": [

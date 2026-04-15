@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Literature Review Skill Memory Manager
+Anlects Review Skill Memory Manager
 实现 Read-Write Reflective Learning 的记忆管理功能
 
 Version: 5.0.0 (Split Architecture)
@@ -11,7 +11,7 @@ v5.0.0 变更:
 - 拆分架构：文化比较模块独立为 cultural-comparator skill
 - Get笔记集成已移除（由外部工具负责）
 - 工作流编排器已移至 cultural-comparator
-- 本模块仅负责 literature-review 核心的记忆管理与路由
+- 本模块仅负责 Anlects-review 核心的记忆管理与路由
 
 P3 增强路由核心变化:
 - route_chapter 命令：直接传入章节ID，从 chapter_graph.json 读取 compression 数据
@@ -29,8 +29,8 @@ from datetime import datetime
 from typing import Dict, Any, Optional, List
 
 # 配置
-SKILL_DIR = Path.home() / ".workbuddy" / "skills" / "literature-review"
-MEMORY_FILE = SKILL_DIR / "literature_review_memory.json"
+SKILL_DIR = Path.home() / ".workbuddy" / "skills" / "Anlects-review"
+MEMORY_FILE = SKILL_DIR / "anlects_review_memory.json"
 CHAPTER_GRAPH_FILE = SKILL_DIR / "chapter_graph.json"
 INITIAL_UTILITY = 0.75
 WRITE_TRIGGER_FAILURES = 3
@@ -800,7 +800,7 @@ class MemoryManager:
         data = self.read()
 
         print("\n" + "=" * 60)
-        print("## Literature Review Skill 统计 (v5.0.0 P3)")
+        print("## Anlects Review Skill 统计 (v5.0.0 P3)")
         print("=" * 60)
         print(f"\n版本: {data.get('version', 'unknown')}")
         print(f"总执行次数: {stats['total_executions']}")
@@ -858,7 +858,7 @@ def _print_migration(msg: str):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Literature Review Memory Manager - v5.0.0 P3 Enhanced Routing",
+        description="Anlects Review Memory Manager - v5.0.0 P3 Enhanced Routing",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 示例:

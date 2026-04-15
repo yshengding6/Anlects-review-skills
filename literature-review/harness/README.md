@@ -1,8 +1,8 @@
-# Literature Review Skill v4.3.0 - Harness 测试框架
+# Anlects Review Skill v4.3.0 - Harness 测试框架
 
 ## 概述
 
-本 Harness 测试框架用于验证 literature-review-skill 的**原则零**（自适应路径 + 执行确定性）是否正确实现。
+本 Harness 测试框架用于验证 Anlects-review-skill 的**原则零**（自适应路径 + 执行确定性）是否正确实现。
 
 ## 组件说明
 
@@ -108,7 +108,7 @@ python run_regression.py /path/to/golden_set.json
 ## 运行测试
 
 ```bash
-cd ~/.workbuddy/skills/literature-review-skill/harness
+cd ~/.workbuddy/skills/Anlects-review-skill/harness
 
 # 单独运行路由断言
 python route_assertions.py

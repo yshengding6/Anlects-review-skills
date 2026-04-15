@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""测试 literature-review 记忆管理器（v5.0.0）"""
+"""测试 Anlects-review 记忆管理器（v5.0.0）"""
 
 import sys
 import os
