@@ -1,4 +1,4 @@
-# Anlects Review Skill v4.3.0 - Harness 测试框架
+# Anlects Review Skill v5.0.0 - Harness 测试框架
 
 ## 概述
 
@@ -151,4 +151,4 @@ python run_regression.py
 
 ## 版本历史
 
-- **v4.3.0** (2026-04-14): 初始版本，实现原则零自适应路径+执行确定性验证
+- **v5.0.0** (2026-04-14): 拆分架构，原则零自适应路径+执行确定性验证

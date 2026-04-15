@@ -28,7 +28,8 @@ B+D 混合方案（核心自给 + 下游按需覆盖）：
 将各子目录复制到 `~/.workbuddy/skills/` 下即可：
 
 ```bash
-cp -r Anlects-review/ ~/.workbuddy/skills/
+# 核心Skill（目录名为 literature-review，安装后建议重命名为 anlects-review）
+cp -r literature-review/ ~/.workbuddy/skills/anlects-review/
 cp -r cultural-comparator/ ~/.workbuddy/skills/
 cp -r classical-content-writer/ ~/.workbuddy/skills/
 ```
