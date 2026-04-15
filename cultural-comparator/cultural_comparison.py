@@ -529,13 +529,13 @@ class CulturalComparator:
             f"",
             f"---",
             f"",
-            f"## 四、宗教传统交叉审视",
+            f"## 三、宗教传统交叉审视",
             f"",
         ])
 
-        # 4.1 东亚宗教
+        # 3.1 东亚宗教
         if result.eastern_religion:
-            lines.append("### 4.1 东亚宗教视角")
+            lines.append("### 3.1 东亚宗教视角")
             for tradition, views in result.eastern_religion.items():
                 if isinstance(views, dict):
                     key_points = [f"{k}：{v}" for k, v in list(views.items())[:3]]
@@ -544,7 +544,7 @@ class CulturalComparator:
 
         # 4.2 亚伯拉罕传统
         if result.abrahamic_religion:
-            lines.append("### 4.2 亚伯拉罕传统视角")
+            lines.append("### 3.2 亚伯拉罕传统视角")
             for tradition, views in result.abrahamic_religion.items():
                 if isinstance(views, dict):
                     contrast = views.get("与儒对照", views.get("核心差异", ""))
@@ -557,7 +557,7 @@ class CulturalComparator:
 
         # 4.3 南亚传统
         if result.south_asian_religion:
-            lines.append("### 4.3 南亚传统视角")
+            lines.append("### 3.3 南亚传统视角")
             for tradition, views in result.south_asian_religion.items():
                 if isinstance(views, dict):
                     contrast = views.get("与儒对照", views.get("核心差异", ""))
@@ -570,7 +570,7 @@ class CulturalComparator:
 
         # 4.4 不可通约点
         if result.incommensurables:
-            lines.append("### 4.4 不可通约点")
+            lines.append("### 3.4 不可通约点")
             for inc in result.incommensurables[:5]:
                 lines.append(f"- {inc}")
             lines.append("")
@@ -578,16 +578,16 @@ class CulturalComparator:
         lines.extend([
             f"---",
             f"",
-            f"## 五、异同总结",
+            f"## 四、异同总结",
             f"",
-            f"### 5.1 相同点",
+            f"### 4.1 相同点",
         ])
         for s in result.similarities[:5]:
             lines.append(f"- {s}")
 
         lines.extend([
             f"",
-            f"### 5.2 根本差异",
+            f"### 4.2 根本差异",
         ])
         for d in result.differences[:5]:
             lines.append(f"- {d}")
@@ -596,7 +596,7 @@ class CulturalComparator:
             f"",
             f"---",
             f"",
-            f"## 六、冷知识命题",
+            f"## 五、冷知识命题",
             f"",
             f"{result.cold_knowledge}",
             f"",

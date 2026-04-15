@@ -29,7 +29,7 @@ from datetime import datetime
 from typing import Dict, Any, Optional, List
 
 # 配置
-SKILL_DIR = Path.home() / ".workbuddy" / "skills" / "Anlects-review"
+SKILL_DIR = Path.home() / ".workbuddy" / "skills" / "anlects-review"
 MEMORY_FILE = SKILL_DIR / "anlects_review_memory.json"
 CHAPTER_GRAPH_FILE = SKILL_DIR / "chapter_graph.json"
 INITIAL_UTILITY = 0.75
@@ -156,7 +156,7 @@ class MemoryManager:
                         "weight": 1.0
                     },
                     "variable_substitution": {
-                        "boost_tags": ["假设", "如果", " counterfactual", "因果",
+                        "boost_tags": ["假设", "如果", "counterfactual", "因果",
                                        "历史假设", "制度比较", "角色互换"],
                         "priority_dim": "主题深度",
                         "weight": 1.0
@@ -183,7 +183,7 @@ class MemoryManager:
         }
 
     def _validate_schema(self, data: Dict[str, Any]) -> bool:
-        """验证数据结构是否符合 v4.x 规范"""
+        """验证数据结构是否符合 v5.0.0 规范"""
         required_keys = [
             "version", "user_preferences", "blades",
             "socratic_session", "execution_log", "cold_knowledge_cache",
@@ -192,7 +192,7 @@ class MemoryManager:
         return all(key in data for key in required_keys)
 
     def _migrate_schema(self, old_data: Dict[str, Any]):
-        """从旧版本迁移数据到 v4.1"""
+        """从旧版本迁移数据到 v5.0.0"""
         new_data = self._create_initial()
 
         # 迁移执行日志（如果有）

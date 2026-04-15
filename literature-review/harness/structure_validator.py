@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Structure Validator - 9章输出结构完整性校验器
-验证 Anlects-review-skill 的输出是否符合 v4.3.0 的 9 章结构规范
+验证 Anlects-review-skill 的输出是否符合 v5.0.0 的 9 章结构规范
 """
 
 import json
@@ -268,7 +268,7 @@ class StructureValidator:
         
         report_lines = [
             "=" * 60,
-            "Anlects Review Skill 结构验证报告 (v4.3.0)",
+            "Anlects Review Skill 结构验证报告 (v5.0.0)",
             "=" * 60,
             f"启用工具: {', '.join(self.enabled_tools) if self.enabled_tools else '无'}",
             f"验证结果: {result.value}",

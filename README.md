@@ -2,6 +2,8 @@
 
 古典文献研究技能包，基于 Memento-Skills 论文（arXiv:2603.18743）的 Read-Write Reflective Learning 架构。
 
+**仓库地址**: [https://github.com/yshengding6/Anlects-review-skills](https://github.com/yshengding6/Anlects-review-skills)
+
 ## 技能组成
 
 ### 1. Anlects-review（核心 Skill，v5.0.0）
@@ -28,12 +30,26 @@ B+D 混合方案（核心自给 + 下游按需覆盖）：
 将各子目录复制到 `~/.workbuddy/skills/` 下即可：
 
 ```bash
-# 核心Skill（目录名为 literature-review，安装后建议重命名为 anlects-review）
+# 核心Skill
 cp -r literature-review/ ~/.workbuddy/skills/anlects-review/
+
+# 文化比较器
 cp -r cultural-comparator/ ~/.workbuddy/skills/
+
+# 内容写作器
 cp -r classical-content-writer/ ~/.workbuddy/skills/
 ```
 
+## 依赖
+
+各 Skill 的 Python 依赖见各自目录下的 `requirements.txt`：
+
+| Skill | 依赖 |
+|-------|------|
+| anlects-review | markdown>=3.5 |
+| cultural-comparator | 无（纯标准库） |
+| classical-content-writer | markdown, python-docx, reportlab, weasyprint |
+
 ## 许可证
 
-MIT License
+MIT License (2024-2026)

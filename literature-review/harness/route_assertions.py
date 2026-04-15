@@ -1,5 +1,5 @@
 """
-Anlects Review Skill v4.3.0 - Route Assertions
+Anlects Review Skill v5.0.0 - Route Assertions
 路由断言：验证文本特征→方法论启用的映射是否符合原则零规则
 
 用法:
@@ -266,7 +266,7 @@ def run_golden_set_tests() -> tuple:
     all_errors = []
     
     print("=" * 60)
-    print("ANLECTS REVIEW SKILL v4.3.0 - ROUTE ASSERTIONS")
+    print("ANLECTS REVIEW SKILL v5.0.0 - ROUTE ASSERTIONS")
     print("=" * 60)
     
     for case in cases:
@@ -378,7 +378,7 @@ def analyze_custom_text(text: str, context: str = "", commentaries: Optional[Lis
     print("  章节六：圆桌会议纪要 (视需要)")
     print("  章节七：证据分级综述 [ON] (必有)")
     print("  章节八：老丁因子 [ON] (必有)")
-    print("  章节九：冷知识命题 [ON] (必有)")
+    print("  章节九：冷知识命题 (可选，有触发点时输出)")
 
 
 if __name__ == "__main__":

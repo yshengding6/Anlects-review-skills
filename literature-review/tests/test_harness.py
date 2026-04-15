@@ -26,7 +26,7 @@ class TestRouteAsserter(unittest.TestCase):
         asserter = RouteAsserter(text)
         result = asserter.assert_routing()
         
-        self.assertIn("political", result.actual_tools)
+        self.assertIn("political_history", result.actual_tools)
         self.assertTrue(any("政治史" in r for r in result.reasoning))
     
     def test_anomaly_trigger(self):
@@ -35,7 +35,7 @@ class TestRouteAsserter(unittest.TestCase):
         asserter = RouteAsserter(text)
         result = asserter.assert_routing()
         
-        self.assertIn("anomaly", result.actual_tools)
+        self.assertIn("anomaly_detection", result.actual_tools)
     
     def test_variable_trigger(self):
         """测试变量替换触发关键词"""
@@ -43,7 +43,7 @@ class TestRouteAsserter(unittest.TestCase):
         asserter = RouteAsserter(text)
         result = asserter.assert_routing()
         
-        self.assertIn("variable", result.actual_tools)
+        self.assertIn("variable_replacement", result.actual_tools)
     
     def test_anatomy_trigger(self):
         """测试六维解剖触发（用户提供注疏）"""
@@ -51,7 +51,7 @@ class TestRouteAsserter(unittest.TestCase):
         asserter = RouteAsserter(text)
         result = asserter.assert_routing()
         
-        self.assertIn("anatomy", result.actual_tools)
+        self.assertIn("six_dimension", result.actual_tools)
     
     def test_minimal_text(self):
         """测试最小化文本（仅字词校释）"""
@@ -59,8 +59,11 @@ class TestRouteAsserter(unittest.TestCase):
         asserter = RouteAsserter(text)
         result = asserter.assert_routing()
         
-        # 纯论语文本，没有特殊触发词
-        self.assertEqual(len(result.actual_tools), 0)
+        # 纯论语文本，会触发古典文献默认路由（anomaly_detection + variable_replacement）
+        self.assertIn("anomaly_detection", result.actual_tools)
+        self.assertIn("variable_replacement", result.actual_tools)
+        self.assertNotIn("political_history", result.actual_tools)
+        self.assertNotIn("six_dimension", result.actual_tools)
     
     def test_combined_triggers(self):
         """测试多触发词组合"""
@@ -68,9 +71,9 @@ class TestRouteAsserter(unittest.TestCase):
         asserter = RouteAsserter(text)
         result = asserter.assert_routing()
         
-        self.assertIn("political", result.actual_tools)
-        self.assertIn("anomaly", result.actual_tools)
-        self.assertIn("anatomy", result.actual_tools)
+        self.assertIn("political_history", result.actual_tools)
+        self.assertIn("anomaly_detection", result.actual_tools)
+        self.assertIn("six_dimension", result.actual_tools)
 
 
 class TestStructureValidator(unittest.TestCase):
@@ -248,8 +251,8 @@ class TestIntegration(unittest.TestCase):
         router = RouteAsserter(input_text)
         routing_result = router.assert_routing()
         
-        self.assertIn("political", routing_result.actual_tools)
-        self.assertIn("anatomy", routing_result.actual_tools)
+        self.assertIn("political_history", routing_result.actual_tools)
+        self.assertIn("six_dimension", routing_result.actual_tools)
         
         # 3. 生成模拟输出
         mock_output = f"""
@@ -295,7 +298,15 @@ class TestIntegration(unittest.TestCase):
 """
         
         # 4. 结构验证
-        validator = StructureValidator(mock_output, routing_result.actual_tools)
+        # 将路由名称映射为 StructureValidator 使用的短名
+        tool_mapping = {
+            "political_history": "political",
+            "six_dimension": "anatomy",
+            "anomaly_detection": "anomaly",
+            "variable_replacement": "variable"
+        }
+        enabled_tools = [tool_mapping[t] for t in routing_result.actual_tools if t in tool_mapping]
+        validator = StructureValidator(mock_output, enabled_tools)
         struct_result, issues = validator.validate()
         
         self.assertEqual(struct_result, ValidationResult.PASS)
@@ -311,7 +322,7 @@ class TestGoldenSetCompliance(unittest.TestCase):
             import json
             with open(golden_set_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-                self.golden_set = data.get("test_cases", [])
+                self.golden_set = data.get("cases", [])
         else:
             self.golden_set = []
     
@@ -327,10 +338,14 @@ class TestGoldenSetCompliance(unittest.TestCase):
         for case in self.golden_set:
             with self.subTest(case=case.get("name", "未命名")):
                 # 路由断言
-                input_text = case.get("input", "")
-                expected_tools = set(case.get("expected_routing", {}).get("expected_enabled_tools", []))
+                input_data = case.get("input", {})
+                input_text = input_data.get("text", "")
+                context = input_data.get("context", "")
+                commentaries = input_data.get("provided_commentaries", [])
+                expected_routes = case.get("expected_routes", {})
+                expected_tools = {k for k, v in expected_routes.items() if v is True and k in ["political_history", "anomaly_detection", "variable_replacement", "six_dimension"]}
                 
-                router = RouteAsserter(input_text)
+                router = RouteAsserter(input_text, context, commentaries)
                 routing_result = router.assert_routing()
                 
                 self.assertEqual(

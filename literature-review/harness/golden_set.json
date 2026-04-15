@@ -1,6 +1,6 @@
 {
-  "description": "Anlects Review Skill v4.3.0 - Golden Set for Harness Testing",
-  "version": "4.3.0",
+  "description": "Anlects Review Skill v5.0.0 - Golden Set for Harness Testing",
+  "version": "5.0.0",
   "created": "2026-04-14",
   "principle_zero_rules": {
     "route_triggers": {
@@ -40,7 +40,7 @@
       {"id": 6, "name": "圆桌会议纪要", "condition": "需要圆桌论辩时"},
       {"id": 7, "name": "证据分级综述", "always": true},
       {"id": 8, "name": "老丁因子", "always": true},
-      {"id": 9, "name": "冷知识命题", "always": true}
+      {"id": 9, "name": "冷知识命题", "required": false}
     ],
     "laoding_factor_structure": [
       "核心判断",

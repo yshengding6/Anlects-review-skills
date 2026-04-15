@@ -61,7 +61,7 @@ class RegressionRunner:
         all_passed = True
         
         print("\n" + "=" * 70)
-        print("Anlects Review Skill Regression Test (v4.3.0)")
+        print("Anlects Review Skill Regression Test (v5.0.0)")
         print("=" * 70)
         
         for i, test_case in enumerate(self.golden_set, 1):
@@ -232,7 +232,7 @@ class RegressionRunner:
         
         return {
             "timestamp": datetime.now().isoformat(),
-            "version": "v4.3.0",
+            "version": "v5.0.0",
             "total_tests": total,
             "passed": passed,
             "failed": failed,
