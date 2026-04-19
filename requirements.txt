@@ -1,0 +1,5 @@
+# Anlects Review Skill - Core Dependencies
+# Python version: 3.8+
+
+# === Markdown ===
+markdown>=3.5
